@@ -5,6 +5,7 @@ import aiohttp_jinja2
 from jinja2 import FileSystemLoader
 import pathlib
 
+
 BASE_DIR = pathlib.Path(__file__).parent.parent.absolute()
 
 
@@ -15,6 +16,7 @@ def createApp():
         app.router.add_route("*", route.path, route.handler, name=route.name)
     aiohttp_jinja2.setup(
         app,
+        default_helpers= True,
         loader= FileSystemLoader(
             [
                 path / 'templates'
@@ -22,8 +24,9 @@ def createApp():
                 if path.is_dir() and (path / "templates").exists()
 
             ]
-        ) 
+        )
     )
+    app['static_root_url'] = "/static"
 
     return app
 

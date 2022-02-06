@@ -2,12 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AXIT</title>
+    <link rel="stylesheet" href="{{ static('style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>HELLO</h1>
-    {{var}}
-</body>
-</html>
+    <header class="menu"> 
+        <nav>
+            <a href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwj8tOL2gtX1AhVnkosKHd8ICgMQPAgI" ><img class="menu__logo" src="./imagine/AXITlogo.svg" alt="logo"></a>
+            <ul class="menu__list">
+                <li class="menu__list__item">
+                    <a class="menu__list__link" href="#tabs">Features</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__list__link" href="#about">About</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__list__link" href="#prise">Pricing</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__list__link" href="#reviews">Reviews</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__list__link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!--Main banner-->
+        <section class="banner-dark">
+            <div class="banner__box1"> 
+                <img class="banner__logo" src="./imagine/AXITlogo.svg" alt="logo">
+                <h1 class="banner__header">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</h1>
+                <hr class="line-dark">
+                <p class="banner__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <a class="banner__button-small" href="./imagine/1594e3d231fed5eebf50de85c9ac6bd9.jpg" download>Download</a>
+            </div>
+    
+            <div class="banner__box2">
+                <h2 class="banner__box2__header">Try Your <span class="free">FREE</span> Trial Today</h2>
+                <form class="banner__form" action="">
+                    <div class="banner__form__item">
+                        <label class="banner__form__name" for="nick">Name</label>
+                        <input class="banner__form__input" type="text" name="nick">
+                    </div>
+                    <div class="banner__form__item">
+                        <label class="banner__form__name" for="e-mail">Email</label>
+                        <input class="banner__form__input" type="text" name="email">
+                    </div>
+                    <div class="banner__form__item">
+                        <label class="banner__form__name" for="password">Password</label>
+                        <input class="banner__form__input" type="password" name="password">
+                    </div>
+                </form>
+                <button class="banner__form__button">Get started</button>
+            </div>
+        </section>
