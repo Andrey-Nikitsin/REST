@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>AXIT</title>
-    <link rel="stylesheet" href="{{ static('style.css') }}">
+    <link rel="stylesheet" href="{{ static('/css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 <body>
     <header class="menu"> 
         <nav>
-            <a href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwj8tOL2gtX1AhVnkosKHd8ICgMQPAgI" ><img class="menu__logo" src="./imagine/AXITlogo.svg" alt="logo"></a>
+            <a href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwj8tOL2gtX1AhVnkosKHd8ICgMQPAgI" ><img class="menu__logo" src=" {{ static('/image/92951104.jpeg') }}" alt="logo"></a>
             <ul class="menu__list">
                 <li class="menu__list__item">
                     <a class="menu__list__link" href="#tabs">Features</a>
@@ -37,11 +37,11 @@
         <!--Main banner-->
         <section class="banner-dark">
             <div class="banner__box1"> 
-                <img class="banner__logo" src="./imagine/AXITlogo.svg" alt="logo">
+                <img class="banner__logo" src=" {{ static('/image/AXITlogo.svg') }}" alt="logo">
                 <h1 class="banner__header">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</h1>
                 <hr class="line-dark">
                 <p class="banner__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <a class="banner__button-small" href="./imagine/1594e3d231fed5eebf50de85c9ac6bd9.jpg" download>Download</a>
+                <a class="banner__button-small" href=" {{ static('/image/92951104.jpeg') }}" download>Download</a>
             </div>
     
             <div class="banner__box2">

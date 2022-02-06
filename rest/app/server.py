@@ -14,6 +14,7 @@ def createApp():
     Controller.entry_point('rest.web.root.urls')
     for route in Controller.urls():
         app.router.add_route("*", route.path, route.handler, name=route.name)
+    app.router.add_static('/static', "static")
     aiohttp_jinja2.setup(
         app,
         default_helpers= True,
@@ -27,7 +28,7 @@ def createApp():
         )
     )
     app['static_root_url'] = "/static"
-
+    
     return app
 
 async def a_create_app():
