@@ -1,3 +1,4 @@
+from os import path
 from aiohttp import web
 import asyncio
 from rest.url.router import Controller
@@ -13,6 +14,7 @@ def createApp():
     app = web.Application()
     Controller.entry_point('rest.web.root.urls')
     for route in Controller.urls():
+        print(route)
         app.router.add_route("*", route.path, route.handler, name=route.name)
     app.router.add_static('/static', "static")
     aiohttp_jinja2.setup(

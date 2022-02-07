@@ -8,15 +8,7 @@ class HomePage(web.View):
     async def get(self):
         return {}
 
-class Tabs(web.View):
 
-    @template('Tabs.html')
-    async def get(request):
-        return {'key' : request}
 
-class About(web.View):
 
-    @template('about.html')
-    async def get(self):
-        return
 
