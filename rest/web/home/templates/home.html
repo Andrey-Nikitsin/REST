@@ -1,40 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>AXIT</title>
-    <link rel="stylesheet" href="{{ static('/css/style.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
+{% extends "base.html" %}
 
-<body>
-    <header class="menu"> 
-        <nav>
-            <a href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwj8tOL2gtX1AhVnkosKHd8ICgMQPAgI" ><img class="menu__logo" src=" {{ static('/image/92951104.jpeg') }}" alt="logo"></a>
-            <ul class="menu__list">
-                <li class="menu__list__item">
-                    <a class="menu__list__link" href="#tabs">Features</a>
-                </li>
-                <li class="menu__list__item">
-                    <a class="menu__list__link" href="#about">About</a>
-                </li>
-                <li class="menu__list__item">
-                    <a class="menu__list__link" href="#prise">Pricing</a>
-                </li>
-                <li class="menu__list__item">
-                    <a class="menu__list__link" href="#reviews">Reviews</a>
-                </li>
-                <li class="menu__list__item">
-                    <a class="menu__list__link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
+{% block home %}
+  
     <main>
-        <!--Main banner-->
         <section class="banner-dark">
             <div class="banner__box1"> 
                 <img class="banner__logo" src=" {{ static('/image/AXITlogo.svg') }}" alt="logo">
@@ -63,3 +31,5 @@
                 <button class="banner__form__button">Get started</button>
             </div>
         </section>
+
+{% endblock home %}   
